@@ -8,7 +8,7 @@ async function init() {
 
     app.use(express.json());
     app.get("/", (req, res) => {
-        res.json({ message: "server is up" });
+        res.json({ message: "Server is up and running" });
     });
 
     const gqlServer = new ApolloServer({
@@ -17,6 +17,7 @@ async function init() {
             hello:String
              say(name:String):String
         }`, // Schema as string
+
         resolvers: {
             Query: {
                 hello: () => {

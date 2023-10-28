@@ -21,7 +21,7 @@ function init() {
         const PORT = 5000;
         app.use(express_1.default.json());
         app.get("/", (req, res) => {
-            res.json({ message: "server is up" });
+            res.json({ message: "Server is up and running" });
         });
         const gqlServer = new server_1.ApolloServer({
             typeDefs: `
